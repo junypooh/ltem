@@ -1,0 +1,54 @@
+spring:
+  application:
+    name: B2BWeb
+
+  cloud:
+    consul:
+      enabled: true
+      host: 127.0.0.1
+      port: 8500
+      discovery:
+        healthCheckPath: ${management.context-path}/health
+        healthCheckInterval: 5s
+        instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+
+      config:
+        format: YAML
+
+encrypt:
+  key: qhaskf
+
+
+---
+spring:
+  profiles: local
+
+  cloud:
+    consul:
+      enabled: false
+
+      config:
+        fail-fast: false
+        enabled: false
+
+      discovery:
+        enabled: false
+        fail-fast: false
+        lifecycle:
+          enabled: false
+        register: false
+    bus:
+      enabled: false
+
+---
+spring:
+  profiles: dev
+
+
+---
+spring:
+  profiles: prd
+
+  cloud:
+    consul:
+      port: 9500

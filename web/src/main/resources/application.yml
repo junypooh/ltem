@@ -1,0 +1,162 @@
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      connection-timeout: 5000
+      max-lifetime: 1800000
+      pool-name: hikariCP-Pool
+      initialization-fail-fast: true
+      leak-detection-threshold: 15000
+      maximum-pool-size: 5
+      connection-test-query: SELECT 1
+
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQL92Dialect
+    database: postgresql
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    properties:
+      max_fetch_depth: 3
+      batch_size: 50
+
+  http:
+    multipart:
+      enabled: true
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+server:
+  session:
+    timeout: 1800 #단위 : 초
+
+hystrix:
+  threadpool:
+    default:
+      coreSize: 20
+      maxQueueSize: 500000
+      keepAliveTimeMinutes: 2
+      queueSizeRejectionThreshold: 500000
+  command:
+    default:
+      fallback:
+        isolation:
+          semaphore:
+            maxConcurrentRequests: 20
+      execution:
+        timeout:
+          enabled: false
+        isolation:
+          strategy: THREAD
+          thread:
+            timeoutInMilliseconds: 30000
+
+---
+spring:
+  profiles: local
+
+  datasource:
+    username: ltem_user
+    password: 1
+    url: jdbc:postgresql://localhost:4432/testDb
+
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+server:
+  port: 8080
+
+ribbon:
+  eureka:
+    enabled: false
+
+B2BGateway:
+  ribbon:
+    listOfServers: 127.0.0.1:9080
+
+hazelcast:
+  servers:
+    - 127.0.0.1
+  groupName: ${spring.application.name}
+  groupPassword: 'baef2865c169cfadd9f0b911bff4911cf8c43a69fbd12685e7b72615bd1e59b4'
+
+flyway:
+  enabled: false
+  encoding: UTF-8
+  check-location: true # 마이그레이션 스크립트 파일이 존재하는지 여부를 확인
+  locations: classpath:db/migration # 마이그레이션 스크립트 위치
+  user: ltem_user
+  password: 1
+  baseline-on-migrate: true
+  baseline-version: 1
+  schemas: ltem
+  url: jdbc:postgresql://localhost:4432/testDb
+
+    #baseline-version: LATEST # 마이그레이션을 시작할 번호
+    #sql-migration-prefix: V
+    #sql-migration-suffix: .sql
+    #url: jdbc:h2:file:~/.database/flywaydb;DB_CLOSE_DELAY=-1;AUTO_SERVER=TRUE;DB_CLOSE_ON_EXIT=FALSE;  # Flyway 소유의 데이터소스를 생성하려고 하는 경우 사용
+
+# lte-m application properties
+lte-m:
+  not:
+    use:
+      ids: user,admin,master,super_master,staff,supervisor
+
+b2b:
+  security:
+    password: dusakfwjdtks
+    salt: ac359e36490284bd
+
+logging:
+  pattern:
+    console: "%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n"
+  level:
+    ROOT: INFO
+    org.apache.catalina: INFO
+    org.springframework: INFO
+    org.springframework.data: INFO
+    org.hibernate: INFO
+    com.kt.giga.home.b2b: DEBUG
+
+upload:
+  file:
+    path: C:/upload
+    thumbnailLogoWidth : 192
+    thumbnailLogoHeight : 68
+    thumbnailBannerWidth : 400
+    thumbnailBannerHeight : 400
+    thumbnailSubBannerWidth : 260
+    thumbnailSubBannerHeight : 260
+
+management:
+  context-path: /actuator
+
+feign:
+  hystrix:
+    enabled: false
+
+bssUrl: http://172.16.2.190:9080/crm/services/svc1000ProviderWS
+---
+#spring:
+#  profiles: dev
+#
+#flyway:
+#  enabled: false
+#
+#server:
+#  port: 9080
+#
+#logging:
+#  pattern:
+#    console: "%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n"
+#  level:
+#    ROOT: DEBUG
+#    org.apache.catalina: INFO
+#    org.springframework: DEBUG
+#    org.hibernate.sql: DEBUG
+#    com.kt.giga.home.b2b: INFO

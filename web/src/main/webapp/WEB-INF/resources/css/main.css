@@ -1,0 +1,102 @@
+@charset "utf-8";
+/* CSS Document */
+
+.main_top{overflow: hidden; margin-bottom: 20px;}
+.main_top .left{float: left; padding-top: 10px;}
+.main_top .left span, .main_top .left strong{line-height: 1.2; font-size: 16px;}
+.main_top .left span{font-weight: normal;}
+.main_top .left strong{margin-left: 15px; padding-left: 15px; background: url(../images/bg_line.gif) no-repeat 0 50%; background-size: 1px 16px;}
+.main_top .right{float: right;}
+
+.wrap_content{overflow: hidden; width: 100%;}
+.box_data{overflow: hidden; width: 820px; float: left;}
+.box_data li{float: left; width: 260px; height: 260px; margin-right: 10px; margin-bottom: 10px; border: 1px solid #e5e5e5;}
+.box_data li > a > div, .box_data li > div{overflow: hidden; padding: 45px 30px 30px; text-align: center;}
+.box_data li > a > div em, .box_data li > div em{display: block; padding-top: 80px; font-size: 48px; color: #ea252c;}
+.box_data li > a > div em > span, .box_data li > div em > span{color: #999;}
+.box_data li > a > div strong, .box_data li > div strong{display: block; padding-top: 5px; font-size: 18px; color: #333; font-weight: normal;}
+.box_data li.type1{}
+.box_data li.type2  > a > div .dv1{float: left; width: 80px;}
+.box_data li.type2  > a > div .dv2{float: right; width: 80px;}
+.box_data li.type2  > a > div strong{clear: both;}
+.box_data li .bg1 em{background: url(../images/ico_main_ty1.png) no-repeat 50% 0;}
+.box_data li .bg2 em{background: url(../images/ico_main_ty2.png) no-repeat 50% 0;}
+.box_data li .bg3 em{background: url(../images/ico_main_ty3.png) no-repeat 50% 0;}
+.box_data li .bg4 em{background: url(../images/ico_main_ty4.png) no-repeat 50% 0;}
+.box_data li .bg5 em{background: url(../images/ico_main_ty5.png) no-repeat 50% 0;}
+.box_data li .bg6 em{background: url(../images/ico_main_ty6.png) no-repeat 50% 0;}
+.box_data li .bg7 em{background: url(../images/ico_main_ty7.png) no-repeat 50% 0;}
+.box_data li .bg8 em{background: url(../images/ico_main_ty8.png) no-repeat 50% 0;}
+.box_data li .bg9 em{background: url(../images/ico_main_ty9.png) no-repeat 50% 0;}
+
+.wrap_mrg{width: 520px; float: left;}
+.wrap_mrg .list_num{height: 260px; margin-bottom: 10px; border: 1px solid #e5e5e5;}
+.wrap_mrg .list_num > div{padding: 25px 25px;}
+.wrap_mrg .list_num h3{padding-bottom: 15px; font-size: 1.385em;}
+.wrap_mrg .list_num h3 em{font-weight: bold;}
+.wrap_mrg .box_tbllist{min-height: 175px; border-top: 1px solid #e5e5e5;}
+.wrap_mrg .box_tbllist table{width: 100%;}
+.wrap_mrg .box_tbllist table .per4{width: 4%;}
+.wrap_mrg .box_tbllist tbody tr:hover{cursor: pointer;}
+.wrap_mrg .box_tbllist thead th{padding: 5px 5px; background: #f6f6f6; text-align: center;}
+.wrap_mrg .box_tbllist tbody td{padding: 10px 5px; border-top: 1px solid #e5e5e5; text-align: center;}
+.wrap_mrg .box_tbllist tbody td.alignl{text-align: left;}
+.wrap_mrg .box_tbllist tbody tr:first-child td{padding: 10px 5px; border-top: 1px solid #e5e5e5;}
+.wrap_mrg .box_tbllist tbody tr.last td{border-bottom: 1px solid #e5e5e5;}
+.wrap_mrg .box_tbllist tbody td .btn_view{border: 1px solid #dcdcdc; background: #f6f6f6; padding: 0 10px;}
+.wrap_mrg .box_tbllist tbody td .btn_view button{display: block; width: 100%; padding: 5px 0; text-align: center;}
+.wrap_mrg .box_tbllist tr.red td{color: #ea252c;}
+.wrap_mrg .box_tbllist tbody td.logo_comp button{text-decoration: underline;}
+
+.box_btm{overflow: hidden;}
+.box_btm .list_ntc{float: left; height: 260px; margin-right: 10px; border: 1px solid #e5e5e5;}
+.box_btm .list_ntc > div{padding: 25px 25px;}
+.box_btm .list_ntc h3{margin-bottom: 15px; font-size: 1.538em;}
+.box_btm .list_ntc li{margin-bottom: 10px;}
+.box_btm .list_ntc li > span{display: block; width: 200px; text-overflow:ellipsis; overflow:hidden; white-space:nowrap;}
+.box_btm .list_ntc li.datanon > span{height: 170px; text-align: center; line-height: 11;}
+.box_btm .list_ntc li .date{color: #999;}
+
+.box_btm .area_slide{height: 262px;}
+
+.nondata{padding: 15px 10px; text-align: center; font-size: 1.1em;}
+.nondata.bdr2p{border-bottom: 1px solid #e5e5e5;}
+
+/* mobile */
+@media (max-width: 1000px) {
+	#content{padding-top: 20px;}
+
+	.box_gnb h2{overflow: hidden; width: 100%; background: url(../images/logo_m.jpg) no-repeat 50% 50%; background-size: 124px auto; text-indent: -9999px; font-size: 0;}
+	.main_top{display: none;}
+	.box_data{float: none; width: auto; padding: 0px 20px 0px 20px;}
+	.box_data li{width: 48%; height: auto; margin-right: 0;}
+	.box_data li:nth-of-type(1n){float: left;}
+	.box_data li:nth-of-type(2n){float: right;}
+	.box_data li > a > div{padding: 20px 5px 20px;}
+	.box_data li.type2 > a > div .dv1{width: 50%;}
+	.box_data li.type2 > a > div .dv2{width: 50%;}
+	.box_data li > a > div strong{font-size: 1.077em;}
+	.box_data li .bg em{background-size: 70px auto; font-size: 20px;}
+
+	.wrap_mrg{float: none; width: auto; padding: 0 20px 0 20px;}
+	.wrap_mrg .list_num{width: 100%; height: auto;}
+	.wrap_mrg .list_num h3{padding-left: 15px;}
+	.wrap_mrg .list_num > div{padding: 15px 0 0 0;}
+	.wrap_mrg .box_tbllist tbody tr.last td{border-bottom: 0;}
+
+	.box_btm .list_ntc{float: none; margin-right: 0; margin-bottom: 10px;}
+	.box_btm .list_ntc > div{padding: 15px 15px;}
+	.box_btm .list_ntc li > span{width: 100%;}
+	.box_btm .list_ntc li.datanon > span{height: 170px; text-align: center; line-height: 11;}
+	.box_btm .area_slide{float: none; width: 100%; height: auto;}
+	.box_btm .area_slide .swiper-slide img{width: 100%;}
+}
+
+@media screen and (max-width: 414px) {
+}
+
+@media screen and (max-width: 320px) {
+	.box_data li > div em{padding-top: 60px;}
+	.box_data li > div strong{font-size: 1em;}
+	.box_data li .bg em{background-size: 50px auto;}
+}

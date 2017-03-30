@@ -1,0 +1,181 @@
+@charset "utf-8";
+/* CSS Document */
+
+#wrap_mem{overflow-y: auto; width: 100%; height: 100%; background: #f6f6f6;}
+
+.header_login{position: relative; overflow: hidden; width: 700px; margin: 0 auto; height: 50px; border-bottom: 1px solid #dcdcdc; background: #fff;}
+.header_login h1{position: absolute; top: 15px; left: 10px; width: 180px; height: 22px; background: url(../images/logo.png) no-repeat 0 0; background-size: 100% auto;}
+.header_login h1 a{display: block; width:  100%; height: 100%; text-indent: -9999px; font-size:0;}
+.header_login h2{display: none;}
+.header_login .btn_gnb{display: none;}
+
+#wrap_mem #container{width: 700px; margin: 0 auto; background: #fff;}
+
+.wrap_login{width: 1340px; margin: 0 auto; line-height: 1.6; background: #fff;}
+.wrap_login > div{overflow: hidden; width: 890px; margin:  0 auto; padding: 100px 0 100px 0;}
+.wrap_login .cont_mem{padding: 50px 120px 100px 120px;}
+.wrap_login h1{overflow: hidden; width: 100%; height: 38px; margin: 0 auto 80px auto; background: url(../images/logo.png) no-repeat 50% 0; text-indent: -9999px;}
+
+.box_login{overflow: hidden;}
+.box_logmn{overflow: hidden; float: left; width: 400px; padding-right: 40px; border-right: 1px solid #e5e5e5;}
+.box_login .inp_id{padding: 0 15px; margin-bottom: 10px; border: 1px solid #dcdcdc;}
+.box_login .inp_pass{padding: 0 15px; margin-bottom: 10px; border: 1px solid #dcdcdc;}
+.box_login .inp_id input, .box_login .inp_pass input{display: block; width: 100%; padding: 10px 0;  font-size: 1.231em; border: 0;}
+.box_login .inp_mem{padding: 0; margin-bottom: 7px; border: 1px solid #dcdcdc;}
+.box_login .inp_mem input{display: block; width: 88%; padding: 10px 10px;  font-size: 1.231em; border: 0;}
+.box_login .inp_mem input.inp_numchk{display: inline-block; width: 80%;}
+.box_login .btn_login{display: block; margin-top: 20px; padding: 10px 10px; color: #fff; background: #ea252c; font-size: 1.538em; text-align: center;}
+.box_login .btn_list{overflow: hidden; display: block; margin-top: 40px;}
+.box_login .btn_list a{display: block; padding: 10px 0px; color: #fff; font-size: 1.538em; text-align: center;}
+.box_login .btn_list .btn_left{float: left; width: 49.5%; background: #333;}
+.box_login .btn_list .btn_right{float: right; width: 49.5%; background: #ea252c;}
+
+.box_login .check_id{margin-top: 10px; font-size: 14px;}
+.box_login .check_id input{margin-right: 5px; vertical-align: middle;}
+.box_login .search_mem{padding-top: 15px; text-align: center;}
+.box_login .search_mem a{display: inline-block; padding: 2px 20px; font-size: 1.077em;}
+.box_login .search_mem a:first-child{background: url(../images/bg_line.gif) no-repeat 100% 50%;  background-size: 1px 60%;}
+.box_login .txt_false{display: none; color: #ea252c;}
+.box_login .txt_false.on{display: block;}
+.box_login .txt_access{margin-bottom: 40px; text-align: center;}
+.box_login .txt_access strong{display: block; padding-bottom: 10px; font-size: 1.846em;}
+.box_login .txt_access span{display: block; font-size: 1.077em;}
+.box_login .area_access{overflow: hidden; width: 100%;}
+.box_login .area_access .inp_mem{float: left; width: 81%; height: 44px;}
+.box_login .area_access .btn_resend{float: right; width: 17%; height: 44px; border: 1px solid #dcdcdc; background: #f6f6f6;}
+.box_login .area_access .btn_resend a{display: block; padding: 10px 5px; font-size: 1.231em; text-align: center;}
+.box_login .id_view{width: 100%; margin-top: 40px; text-align: center;}
+.box_login .id_view span{display: block; padding: 20px 10px; background: #f6f6f6; border: 1px solid #dcdcdc; color: #333; font-size: 1.538em;}
+.box_login .area_cap{overflow: hidden; width: 100%; padding-top: 10px;}
+.box_login .area_cap > span{display: block; padding-bottom: 4px;}
+.box_login .area_cap .cap{overflow: hidden; width: 100%;}
+.box_login .area_cap .cap .num{float: left; width: 75%; height: 44px; margin-bottom: 10px; border: 1px solid #dcdcdc; text-align: center;}
+.box_login .area_cap .cap .num img{width: 100%; height: 100%;}
+.box_login .area_cap .cap .btn_refresh{float: right; width: 19%;}
+.box_login .area_cap .cap .btn_refresh button{padding: 10px 0 10px 20px; background: url(../images/ico_refresh.png) no-repeat 0 50%; font-size: 1em;}
+.box_login .area_cap .cap .inp_txt{clear: both; padding: 0 15px; border: 1px solid #dcdcdc;}
+.box_login .area_cap .cap .inp_txt > input{display: block; width: 100%; padding: 10px 0;  font-size: 1.231em; border: 0;}
+.box_login .area_cap .cap .txt_false{margin-top: 10px;}
+
+.box_logbn{float: left; width: 400px; height: 400px; padding-left: 40px;}
+.box_logbn .swiper-container{position: relative; width: 100%; height: 100%;}
+.box_logbn .swiper-container .swiper-slide{text-align: center;}
+.box_logbn .swiper-container .arrow-left{position: absolute; top: 50%; left: 0; z-index: 1000; width: 40px; height: 40px; margin-top: -10px; background: url(../images/btn_prev_bn.png) no-repeat 0 0;}
+.box_logbn .swiper-container .arrow-left:hover{background: url(../images/btn_prev_bn_on.png) no-repeat 0 0;}
+.box_logbn .swiper-container .arrow-right{position: absolute; top: 50%; right: 0; z-index: 1000; width: 40px; height: 40px; margin-top: -10px; background: url(../images/btn_next_bn.png) no-repeat 0 0;}
+.box_logbn .swiper-container .arrow-right:hover{background: url(../images/btn_next_bn_on.png) no-repeat 0 0;}
+
+.wrap_member{width: 100%; line-height: 1.6; background: #fff;}
+.wrap_member > div{padding: 50px 120px 100px 120px;}
+.wrap_member .h2_web{text-align: center;}
+.wrap_member .h2_web h2{font-size: 2.462em; color: #333;}
+.wrap_member .h2_web p{font-size: 1.077em;}
+.wrap_member .area_inp{margin-top: 30px;}
+.wrap_member .area_inp h3{margin-bottom: 10px; font-size: 1.231em;}
+.wrap_member .area_inp h3.h3_mt20{margin-top: 20px;}
+.wrap_member .area_inp .txt_des{display: block; color: #ea252c;}
+.wrap_member .area_inp .txt_nor{color: #999;}
+.wrap_member .area_inp .txt_nor.txtpd{padding: 0 70px;}
+.wrap_member .area_inp .txt_ter{overflow: hidden; overflow-y: auto; height: 99px; margin-bottom: 10px; border: 1px solid #dcdcdc; background: #f6f6f6;}
+.wrap_member .area_inp .txt_ter > div{padding: 20px 20px;}
+.wrap_member .area_inp .chk_ter{margin-right: 5px;}
+.wrap_member .area_inp .box_allchk{margin-top: 20px; padding-top: 20px; border-top: 2px solid #dcdcdc;}
+.wrap_member .area_inp li{overflow: hidden; margin-bottom: 15px;}
+.wrap_member .area_inp li .inp_mem.email{float: left; width: 262px;}
+.wrap_member .area_inp li .inp_mem.domain{float: left; width: 169px;}
+.wrap_member .area_inp li .inp_mem.domain input{width: 86%;}
+.wrap_member .area_inp li .txt_alp{float: left; padding: 7px 5px 10px 5px; font-size: 1.231em;}
+.wrap_member .area_inp li .txt_des{clear: both;}
+.wrap_member .area_inp li .sel_mem{float: left; margin-right: 4px;}
+.wrap_member .area_inp li .sel_mem select{width: 120px; height: 44px; padding: 3px 2px 3px 5px; font-size: 1.231em; border: 1px solid #dcdcdc;}
+.wrap_member .area_inp li .inp_mem.numchk{float: left; width: 301px;}
+.wrap_member .area_inp li .inp_mem.numchk2{float: left; width: 373px;}
+.wrap_member .area_inp li .inp_mem.numchk2 .timechk{display: inline-block; text-align: right; color: #0459c1;}
+.wrap_member .area_inp li .btn_chk{float: right; width: 17%; text-align: right;}
+.wrap_member .area_inp li .btn_send{float: right; display: block; width: 98.8%; height: 43px; border: 1px solid #dcdcdc; background: #f6f6f6;}
+.wrap_member .area_inp li .btn_send a{display: block; padding: 10px 5px; font-size: 1.231em; text-align: center;}
+.wrap_member .area_inp li .btn_resend{float: right; display: none; width: 98.8%; height: 43px; border: 1px solid #dcdcdc; background: #f6f6f6;}
+.wrap_member .area_inp li .btn_resend a{display: block; padding: 10px 5px; font-size: 1.231em; text-align: center;}
+.wrap_member .area_inp li .btn_phok{float: right; width: 17%; height: 43px; border: 1px solid #dcdcdc; background: #f6f6f6;}
+.wrap_member .area_inp li .btn_phok a{display: block; padding: 10px 5px; font-size: 1.231em; text-align: center;}
+.wrap_member .txt_nor1.txtpd{padding: 15px 70px 0 70px;}
+
+
+#footer_mem{position: relative; overflow: hidden; width: 700px; margin: 0 auto; padding-top: 5px; line-height: 1.6; background: #fff;}
+#footer_mem > div{overflow: hidden; padding: 0 120px 100px 120px;}
+#footer_mem h2{overflow: hidden; width: 147px; height: 18px; margin-bottom: 20px; background: url(../images/logo_btm.png) no-repeat 0 0; text-indent: -9999px; font-size:0;}
+#footer_mem li{float: left;}
+#footer_mem li.m_view{display: none;}
+#footer_mem li a{display: block; padding: 0 10px; color: #333; background: url(../images/bg_line.gif) no-repeat 100% 50%; background-size: 1px 60%; text-align: center;}
+#footer_mem li:first-child a{padding: 0 10px 0 0;}
+#footer_mem .copyright{clear: both; padding-top: 20px;}
+#footer_mem .copyright p{color: #999;}
+#footer_mem .familysite{position: absolute; top: 0; right: 0px;}
+#footer_mem .familysite select{width:120px; height: 41px; padding-left: 10px; border: 1px solid #dcdcdc; font-size: 1em;}
+
+/* mobile */
+@media screen and (max-width: 1000px) {
+	.header_login{overflow: hidden; width: 100%; height: 50px; border-bottom: 1px solid #dcdcdc;}
+	.header_login h1{width: 24px; height: 19px; background: url(../images/logo_kt_m.png) no-repeat 0 0;}
+	.header_login h2{display: block; padding: 10px 0; font-size: 1.538em; text-align: center;}
+	.header_login .btn_gnb{overflow: hidden; display: block; position: absolute; top: 16px; right: 10px; width: 27px; height: 17px; background: url(../images/btn_gnb_m.png) no-repeat 0 0; text-indent: -9999px; font-size:0;}
+
+	#wrap_mem #container{width: 100%;}
+
+	.wrap_login{width: 100%;}
+	.wrap_login > div{width: auto; margin: 0 0; padding: 3em 1em 1em 1em;}
+	.wrap_login h1{overflow: hidden; width: auto; height: 30px; margin: 0 auto 45px auto; background: url(../images/logo.png) no-repeat 50% 0; background-size: auto 100%; text-indent: -9999px; font-size:0;}
+
+	.box_login{float: none; width: 100%; padding-right: 0; border-right: 0;}
+	.box_login .area_access .inp_mem{width: 74.5%;}
+	.box_login .area_access .btn_resend{width: 23%;}
+	.box_login .inp_mem input{padding: 12px 2px 10px 10px;}
+	.box_login .id_view{margin-top: 20px;}
+	.box_login .area_cap .cap .num{width: 74%;}
+
+	.box_logbn{float: none; width: 100%; height: auto; margin-top: 40px; padding-left: 0;}
+
+	.wrap_member{width: 100%;}
+	.wrap_member > div{padding: 3em 1em 1em 1em;}
+	.wrap_member .h2_web h2{display: none;}
+	.wrap_member .area_inp li .inp_mem.email{width: 50%;}
+	.wrap_member .area_inp li .inp_mem.domain{float: right; width: 40%;}
+	.wrap_member .area_inp li .txt_alp{width: 9%; padding: 7px 0 10px 0; font-size: 1.231em; text-align: center;}
+	.wrap_member .area_inp li .sel_mem{width: 25%;}
+	.wrap_member .area_inp li .sel_mem select{width: 100%; padding: 3px 2px 3px 5px;}
+	.wrap_member .area_inp li .inp_mem.numchk{float: left; width: 64%; margin: 0 .3em 7px 0em;}
+	.wrap_member .area_inp li .inp_mem.numchk2{width: 80.6%;}
+	.wrap_member .area_inp .txt_nor.txtpd{padding: 0 20px;}
+	.wrap_member .area_inp.ter_tm{margin-top: 0;}
+	.wrap_member .txt_nor1.txtpd{padding: 15px 20px 0 20px;}
+
+	#footer_mem{width: 100%; padding-top:6em;}
+	#footer_mem > div{overflow: hidden; padding: 1em 1em;}
+	#footer_mem li{float: none; display: inline-block;}
+	#footer_mem li.m_hidden{display: none;}
+	#footer_mem li.m_view{display: inline-block;}
+	#footer_mem .familysite{position: absolute; top: 1em; left: 0;}
+}
+
+@media screen and (max-width: 414px) {
+	.box_login .area_cap .cap .btn_refresh{width: 25%; text-align: right;}
+
+	.wrap_member .area_inp li .inp_mem.numchk{margin: 0 .3em 7px 0em; width: 62%;}
+	.wrap_member .area_inp li .txt_alp{width: 8%;}
+	.wrap_member .area_inp li .btn_chk{width: 17%;}
+}
+
+@media screen and (max-width: 320px) {
+	.box_login .area_access .inp_mem{width: 68%;}
+	.box_login .area_access .btn_resend{width: 28%;}
+	.box_login .area_cap .cap .inp_txt{width: 99%;}
+	.box_login .inp_mem input{padding: 12px 2px 10px 2px;}
+
+	.wrap_member .area_inp li .inp_mem.numchk{width: 55%; margin: 0 .2em 7px 0em;}
+	.wrap_member .area_inp li .inp_mem.numchk2{width: 77%;}
+	.wrap_member .area_inp li .btn_chk{width: 20%;}
+	.wrap_member .area_inp li .btn_phok{width: 20%;}
+
+	#footer_mem li a{padding: 0 3px;}
+	#footer_mem li:first-child a{padding: 0 4px 0 0;}
+}
