@@ -1,0 +1,64 @@
+spring:
+  application:
+    name: B2BGateway
+
+---
+spring:
+  profiles: local
+  application:
+    instance_id: ${spring.profiles}
+
+  cloud:
+    consul:
+      enabled: true
+      host: 127.0.0.1
+      port: 8500
+      discovery:
+        healthCheckPath: ${management.context-path}/health
+        healthCheckInterval: 30s
+        instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+      config:
+        format: YAML
+        data-key: data
+    bus:
+      enabled: false
+
+---
+spring:
+  profiles: dev
+
+  cloud:
+    consul:
+      enabled: true
+      host: 127.0.0.1
+      port: 8500
+      discovery:
+        healthCheckPath: ${management.context-path}/health
+        healthCheckInterval: 30s
+        instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+      config:
+        format: YAML
+        data-key: data
+
+encrypt:
+  key: asdfzxcv
+
+---
+spring:
+  profiles: prd
+
+  cloud:
+    consul:
+      enabled: true
+      host: 127.0.0.1
+      port: 9500
+      discovery:
+        healthCheckPath: ${management.context-path}/health
+        healthCheckInterval: 30s
+        instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+      config:
+        format: YAML
+        data-key: data
+
+encrypt:
+  key: asdfzxcv

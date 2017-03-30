@@ -1,0 +1,68 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        maven { url "http://repo.spring.io/release" }
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.1.RELEASE")
+        classpath("io.spring.gradle:dependency-management-plugin:0.5.0.RELEASE")
+        classpath("org.springframework:springloaded:1.2.6.RELEASE")
+    }
+    ext['tomcat.version'] = '8.5.5'
+}
+
+plugins {
+    id "com.gorylenko.gradle-git-properties" version "1.4.17"
+}
+
+apply plugin: 'java'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'idea'
+apply plugin: 'io.spring.dependency-management'
+
+springBoot {
+    buildInfo()
+}
+
+jar {
+    version = '0.0.1-SNAPSHOT'
+}
+
+idea {
+    module {
+        inheritOutputDirs = false
+        outputDir = file("$buildDir/classes/main/")
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+
+dependencies {
+
+    compile 'org.springframework.boot:spring-boot-starter-actuator'
+    compile 'org.springframework.cloud:spring-cloud-starter-consul-all'
+    compile 'org.springframework.cloud:spring-cloud-starter-zuul'
+    compile 'org.springframework.cloud:spring-cloud-starter-ribbon'
+
+    compile 'org.springframework.security:spring-security-rsa'
+
+    compile 'org.apache.tomcat.embed:tomcat-embed-jasper'
+
+    testCompile("org.springframework.boot:spring-boot-starter-test")
+
+
+}
+
+dependencyManagement {
+    imports {
+        mavenBom 'org.springframework.cloud:spring-cloud-dependencies:Camden.SR5'
+    }
+}
+
+bootRun {
+    addResources = false
+    systemProperty 'spring.profiles.active', 'local'
+}

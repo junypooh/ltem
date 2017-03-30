@@ -1,0 +1,53 @@
+ssl:
+  hostname: ktinfra.hiot.olleh.com
+  port: 9443
+  keyStore: classpath:ssl/ktinfra.hiot.olleh.com.jks
+  caCertificateFile: classpath:ssl/RootCA_SHA2.crt
+
+---
+spring:
+  profiles: local
+
+server:
+  port: 9080
+
+zuul:
+  routes:
+
+    B2BCore:
+      serviceId: B2BCore
+      path: /core/devices
+
+    contract:
+      serviceId: B2BCore
+      path: /core/contract
+
+    svc1000ProviderWS:
+      serviceId: svc1000ProviderWS
+      path: /crm/services/svc1000ProviderWS
+      url: https://stgap.bss-iot.kt.com:8080
+
+    ManagerAPI:
+      path: /manager-api/**
+      serviceId: ManagerAPI
+      stripPrefix: true
+
+
+ribbon:
+  eureka:
+    enabled: false
+
+ManagerAPI:
+  ribbon:
+    listOfServers: 127.0.0.1:8080
+    ServerListRefreshInterval: 15000
+
+B2BCore:
+  ribbon:
+    listOfServers: 127.0.0.1:8080
+    ServerListRefreshInterval: 1500
+
+logging:
+  level:
+    ROOT: DEBUG
+    com.netflix: DEBUG
