@@ -1,0 +1,23 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:svc="http://www.kt.com/m2m/domain/svc1000Provider" xmlns:com="http://www.kt.com/m2m/commonHeader">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <svc:ContSttusChgRequest>
+            <commonHeader>
+                <com:CMPN_CD>ESTHOM</com:CMPN_CD>
+                <com:MSG_ID>20170203162000001</com:MSG_ID>
+                <com:MSG_TYPE>1500</com:MSG_TYPE>
+                <com:USER_ID>hm1234</com:USER_ID>
+                <com:CH_TYPE>W</com:CH_TYPE>
+                <!--Optional:-->
+                <com:RESULT_CODE></com:RESULT_CODE>
+                <!--Optional:-->
+                <com:RESULT_MSG></com:RESULT_MSG>
+            </commonHeader>
+            <contSttusChgReqInfo>
+                <SVC_CONT_NO>980113559</SVC_CONT_NO>
+                <CONT_STTUS_CHG_CD>RSP</CONT_STTUS_CHG_CD>
+                <CONT_STTUS_CHG_RSN_CD>CR</CONT_STTUS_CHG_RSN_CD>
+            </contSttusChgReqInfo>
+        </svc:ContSttusChgRequest>
+    </soapenv:Body>
+</soapenv:Envelope>

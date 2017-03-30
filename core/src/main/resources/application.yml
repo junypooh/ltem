@@ -1,0 +1,104 @@
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      connection-timeout: 10000
+      max-lifetime: 1800000
+      pool-name: hikariCP-Pool
+      initialization-fail-fast: true
+      leak-detection-threshold: 5000
+      maximum-pool-size: 5
+
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQL92Dialect
+    database: postgresql
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+
+server:
+  session:
+    timeout: 600 #단위 : 초
+
+b2b:
+  auditor:
+    fixedName: ${spring.application.name}
+
+---
+spring:
+  profiles: local
+
+  datasource:
+    username: ltem_user
+    password: 1
+    url: jdbc:postgresql://localhost:4432/testDb
+
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+server:
+  port: 9080
+
+security:
+  basic:
+    enabled: false
+  ignored: /**
+
+management:
+  security:
+    enabled: false
+
+cxf:
+  path: /core
+
+flyway:
+  enabled: true
+  encoding: UTF-8
+  check-location: true # 마이그레이션 스크립트 파일이 존재하는지 여부를 확인
+  locations: classpath:db/migration # 마이그레이션 스크립트 위치
+  user: ltem_user
+  password: 1
+  baseline-on-migrate: true
+  baseline-version: 1
+  schemas: ltem
+  clean-on-validation-error: true
+    #baseline-version: LATEST # 마이그레이션을 시작할 번호
+    #sql-migration-prefix: V
+    #sql-migration-suffix: .sql
+    #url: jdbc:h2:file:~/.database/flywaydb;DB_CLOSE_DELAY=-1;AUTO_SERVER=TRUE;DB_CLOSE_ON_EXIT=FALSE;  # Flyway 소유의 데이터소스를 생성하려고 하는 경우 사용
+
+# lte-m application properties
+
+
+logging:
+  pattern:
+    console: "%d %-5level [%thread] %logger{0} : %msg%n"
+  level:
+    ROOT: INFO
+    org.apache.http: INFO
+    org.springframework: WARN
+    com.kt.giga.home.b2b: DEBUG
+    org.hibernate: INFO
+    org.springframework.web: WARN
+    org.springframework.ws.client.MessageTracing: TRACE
+    org.springframework.ws.client.MessageTracing.sent: TRACE
+    org.springframework.ws.client.MessageTracing.received: TRACE
+    org.springframework.ws.server.MessageTracing.sent: TRACE
+    org.springframework.ws.server.MessageTracing.received: TRACE
+
+
+manager-api:
+  listOfServers: 172.16.1.134:8280
+
+Manager-API:
+  ribbon:
+    eureka:
+      enabled: false
+    listOfServers: 172.16.1.134:8280,172.16.1.135:8280
+    ServerListRefreshInterval: 15000
+
+bssUrl: https://stgap.bss-iot.kt.com:8480/crm/services/svc1000ProviderWS

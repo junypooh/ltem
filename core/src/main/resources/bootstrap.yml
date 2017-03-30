@@ -1,0 +1,60 @@
+spring:
+  application:
+    name: B2BCore
+
+---
+spring:
+  profiles: local
+
+  cloud:
+    consul:
+      enabled: false
+
+      config:
+        fail-fast: false
+        enabled: false
+
+      discovery:
+        enabled: false
+        fail-fast: false
+        lifecycle:
+          enabled: false
+        register: false
+    bus:
+      enabled: false
+
+---
+spring:
+  profiles: dev
+
+  cloud:
+    consul:
+      enabled: true
+      host: 127.0.0.1
+      port: 8500
+      discovery:
+        healthCheckPath: ${management.context-path}/health
+        healthCheckInterval: 30s
+        instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+
+      config:
+        format: YAML
+        fail-fast: false
+
+---
+spring:
+  profiles: prd
+
+  cloud:
+    consul:
+      enabled: true
+      host: 127.0.0.1
+      port: 9500
+      discovery:
+        healthCheckPath: ${management.context-path}/health
+        healthCheckInterval: 30s
+        instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+
+      config:
+        format: YAML
+        fail-fast: false

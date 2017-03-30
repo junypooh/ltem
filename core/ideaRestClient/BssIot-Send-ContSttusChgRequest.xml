@@ -1,0 +1,31 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Body>
+        <ns2:ContSttusChgRstRequest xmlns="http://www.kt.com/m2m/commonHeader" xmlns:ns2="http://www.kt.com/m2m/domain/svcResProvider">
+            <ns2:commonHeader>
+                <CMPN_CD>KT</CMPN_CD>
+                <MSG_ID>20170203164252221</MSG_ID>
+                <MSG_TYPE>1750</MSG_TYPE>
+                <USER_ID>hm1234</USER_ID>
+                <CH_TYPE>W</CH_TYPE>
+            </ns2:commonHeader>
+            <ns2:contSttusChgRstReqInfo>
+                <ns2:BIZ_CONT_NO>100000083</ns2:BIZ_CONT_NO>
+                <ns2:BIZ_CONT_CHG_CD>CAN</ns2:BIZ_CONT_CHG_CD>
+                <ns2:CHG_RSN_CD>CR</ns2:CHG_RSN_CD>
+                <ns2:TOT_CNT>2</ns2:TOT_CNT>
+                <ns2:contSttusChgRstLs>
+                    <ns2:SVC_CONT_NO>980113558</ns2:SVC_CONT_NO>
+                    <ns2:TRT_STTUS_CD>S00000</ns2:TRT_STTUS_CD>
+                </ns2:contSttusChgRstLs>
+                <ns2:contSttusChgRstLs>
+                    <ns2:SVC_CONT_NO>980113559</ns2:SVC_CONT_NO>
+                    <ns2:TRT_STTUS_CD>S00000</ns2:TRT_STTUS_CD>
+                </ns2:contSttusChgRstLs>
+
+            </ns2:contSttusChgRstReqInfo>
+
+        </ns2:ContSttusChgRstRequest>
+
+    </soap:Body>
+
+</soap:Envelope>

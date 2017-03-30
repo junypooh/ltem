@@ -1,0 +1,41 @@
+<RestClientRequest>
+  <option name="biscuits">
+    <list />
+  </option>
+  <option name="httpMethod" value="POST" />
+  <option name="urlBase" value="http://localhost:9080" />
+  <option name="urlPath" value="/bss/contract" />
+  <option name="headers">
+    <list>
+      <KeyValuePair>
+        <option name="key" value="Accept" />
+        <option name="value" value="*/*" />
+      </KeyValuePair>
+      <KeyValuePair>
+        <option name="key" value="Cache-Control" />
+        <option name="value" value="no-cache" />
+      </KeyValuePair>
+      <KeyValuePair>
+        <option name="key" value="Content-Type" />
+        <option name="value" value="application/json" />
+      </KeyValuePair>
+      <KeyValuePair>
+        <option name="key" value="Content-Type" />
+        <option name="value" value="application/xml" />
+      </KeyValuePair>
+      <KeyValuePair>
+        <option name="key" value="SOAPAction" />
+        <option name="value" value="bizContInfoRst" />
+      </KeyValuePair>
+    </list>
+  </option>
+  <option name="parameters">
+    <list />
+  </option>
+  <option name="parametersEnabled" value="true" />
+  <option name="haveTextToSend" value="true" />
+  <option name="haveFileToSend" value="false" />
+  <option name="isFileUpload" value="false" />
+  <option name="textToSend" value="&lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt; &lt;soap:Body&gt; &lt;ns2:BizContInfoRstRequest xmlns=&quot;http://www.kt.com/m2m/commonHeader&quot; xmlns:ns2=&quot;http://www.kt.com/m2m/domain/svcResProvider&quot;&gt; &lt;ns2:commonHeader&gt; &lt;CMPN_CD&gt;KT&lt;/CMPN_CD&gt; &lt;MSG_ID&gt;20170123173736142&lt;/MSG_ID&gt; &lt;MSG_TYPE&gt;0150&lt;/MSG_TYPE&gt; &lt;USER_ID&gt;hm1234&lt;/USER_ID&gt; &lt;CH_TYPE&gt;W&lt;/CH_TYPE&gt; &lt;/ns2:commonHeader&gt; &lt;ns2:bizContInfoRstReqInfo&gt; &lt;ns2:CMPN_CD&gt;EST&lt;/ns2:CMPN_CD&gt; &lt;ns2:BIZ_CD&gt;HOM&lt;/ns2:BIZ_CD&gt; &lt;ns2:BIZ_CONT_NO&gt;100000083&lt;/ns2:BIZ_CONT_NO&gt; &lt;ns2:CPERD_UNIT_CD&gt;M&lt;/ns2:CPERD_UNIT_CD&gt; &lt;ns2:CPERD_VAL&gt;1&lt;/ns2:CPERD_VAL&gt; &lt;ns2:BIZ_CONT_CIRCUIT_NUM&gt;5&lt;/ns2:BIZ_CONT_CIRCUIT_NUM&gt; &lt;ns2:BIZ_CONT_ST_DT&gt;20170123&lt;/ns2:BIZ_CONT_ST_DT&gt; &lt;ns2:MAX_CONT_FNS_DT&gt;20170131&lt;/ns2:MAX_CONT_FNS_DT&gt; &lt;ns2:ALWD_QNT_UNIT_CD&gt;G&lt;/ns2:ALWD_QNT_UNIT_CD&gt; &lt;ns2:ALWD_QNT&gt;1&lt;/ns2:ALWD_QNT&gt; &lt;ns2:BIZ_CONT_DESC/&gt; &lt;/ns2:bizContInfoRstReqInfo&gt; &lt;/ns2:BizContInfoRstRequest&gt; &lt;/soap:Body&gt; &lt;/soap:Envelope&gt;" />
+  <option name="filesToSend" value="" />
+</RestClientRequest>
