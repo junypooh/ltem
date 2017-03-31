@@ -1,0 +1,22 @@
+# Created by .ignore support plugin (hsz.mobi)
+/.idea/
+/out/
+/gradle/
+.idea/
+.gradle/
+out/
+*/build/
+/core/logs/
+/gradle/wrapper/gradle-wrapper.properties
+.gitignore
+/common/common.iml
+/core/core.iml
+/repository/repository.iml
+/web/web.iml
+/domain/domain.iml
+/gateway/gateway.iml
+/mapper/mapper.iml
+
+*/logs/
+**/gradlew
+**/gradlew.bat
