@@ -1,0 +1,8 @@
+rootProject.name = 'lte-M'
+include 'core'
+include 'web'
+include 'common'
+include 'repository'
+include 'gateway'
+include 'domain'
+include 'mapper'
